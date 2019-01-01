@@ -13,10 +13,10 @@ module.exports = {
     var access_token = await axios.get(
       `https://graph.accountkit.com/v1.1/access_token?grant_type=authorization_code&code=${
         req.body.code
-      }&access_token=AA|385254295579474|90cd14e0fc105b2b38d47ac547dc4550`
+      }&access_token=AA|<App_ID>|<App_Secret>`
     );
     const accessToken = access_token.data.access_token;
-    const clientSecret = "90cd14e0fc105b2b38d47ac547dc4550";
+    const clientSecret = "<App_Secret>";
     const appsecretProof = CryptoJS.createHmac("sha256", clientSecret)
       .update(accessToken)
       .digest("hex");

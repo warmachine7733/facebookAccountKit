@@ -16,8 +16,8 @@ class App extends Component {
     return (
       <div>
         <AccountKit
-          appId="385254295579474" // Update this!
-          version="v1.1" // Version must be in form v{major}.{minor}
+          appId="<app_Id>" // Update this!
+          version="<app_version>" // Version must be in form v{major}.{minor}
           onResponse={resp => {
             this.storeUser(resp);
           }}
